@@ -1,5 +1,5 @@
 .footer {
-    margin: 50px 170px;
+    margin: 30px 100px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -11,4 +11,28 @@
     align-items: center;
     font-size: 15px;
     margin-bottom: 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        margin: 20px 10px; /* Smaller margins for smaller screens */
+        gap: 15px; /* Reduce the gap for compact layout */
+    }
+
+    .footer-bottom {
+        font-size: 14px; /* Adjust font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        margin: 15px; /* Minimal margin for very small screens */
+        gap: 10px;
+    }
+
+    .footer-bottom {
+        font-size: 12px; /* Further reduce font size for small screens */
+        line-height: 1.5; /* Ensure readability with sufficient line spacing */
+    }
 }

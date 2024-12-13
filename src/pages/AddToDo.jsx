@@ -26,7 +26,7 @@ const AddToDo = () => {
     <Navbar/>
     <div className="min-h-screen  flex items-center justify-center">
       <div className="bg-[#5109bc] p-6 rounded-lg shadow-md w-full max-w-md">
-        <h1 className="text-2xl font-bold text-white mb-6 text-center">
+        <h1 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center">
           Add New To-Do
         </h1>
         <form onSubmit={handleSubmit} className="space-y-4">
