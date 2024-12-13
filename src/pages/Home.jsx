@@ -4,11 +4,11 @@ import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 
 const Home = () => {
-  const { todos, loading } = useTodos();
+  const { todos, loading } = useTodos(); //fetch from the context
 
-  console.log("Rendering Home - Todos:", todos);
+  console.log("Rendering Home - Todos:", todos); //for debugging
 
-  if (loading)
+  if (loading) //while fetching todos, loading text is displayed
     return (
       <div className="flex justify-center items-center h-screen">
         <div className="text-xl font-semibold">Loading...</div>
@@ -30,6 +30,7 @@ const Home = () => {
         </div>
         <div className="overflow-x-auto">
           <table className="w-full table-auto bg-gray-200 shadow-md rounded-lg">
+            {/* table for displaying all todos in a table-like structure */}
             <thead className="text-white bg-[#5109bc] text-lg sm:text-md">
               <tr>
                 <th className="px-4 py-2 text-left">#</th>
@@ -40,6 +41,7 @@ const Home = () => {
               </tr>
             </thead>
             <tbody>
+                {/* map through todos array to generate rows */}
               {todos.map((todo, index) => (
                 <tr
                   key={todo.id}

@@ -5,13 +5,18 @@ import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 
 const EditToDo = () => {
-  const { todos, updateTodo } = useTodos();
-  const { id } = useParams();
-  const navigate = useNavigate();
+  const { todos, updateTodo } = useTodos(); //destructuring from the context
+
+  const { id } = useParams(); //getting id parameter from URL using useParams hook
+
+  const navigate = useNavigate(); //to navigate to other routes
+
+  //local state to manage the form inputs
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [completed, setCompleted] = useState(false);
 
+  //using this we fetch the current to-do item and populate the form fields when component mounts
   useEffect(() => {
     const todo = todos.find((todo) => todo.id === parseInt(id));
     if (todo) {
@@ -19,14 +24,13 @@ const EditToDo = () => {
       setDescription(todo.description || "");
       setCompleted(todo.completed);
     }
-  }, [todos, id]);
+  }, [todos, id]); //dependency array to ensure that the effect runs when todos or id changes
 
-  console.log("Rendering EditToDo - Title:", title, "Description:", description, "Completed:", completed);
+  console.log("Rendering EditToDo - Title:", title, "Description:", description, "Completed:", completed); //for debugging
 
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const updatedTodo = {
+  const handleSubmit = (e) => { //handling form-submission to update the to-do
+    e.preventDefault(); //prevent the default form submission behaviour
+    const updatedTodo = { //creating an object with updated to-do details
       title,
       description,
       completed,
