@@ -1,0 +1,40 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 100px;
+}
+
+.navbar h1 {
+    font-size: 45px;
+    font-weight: 900;
+    cursor: pointer;
+    background: linear-gradient(267deg, #27e1c9 0.36%, #5109bc 102.06%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 70px;
+    font-size: 22px;
+}
+
+.nav-menu li {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #27e1c9;
+}
+
+.nav-menu li:hover {
+    transform: scale(1.25);
+    transition: 0.5s;
+    text-decoration: underline #5109bc;
+}
