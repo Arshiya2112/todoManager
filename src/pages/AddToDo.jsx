@@ -4,20 +4,25 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 
-const AddToDo = () => {
-  const { addTodo } = useTodos();
+const AddToDo = () => { //renders a form to add a new to-do item
+
+  const { addTodo } = useTodos(); //accessing from todos context
+
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (e) => { //to handle form submission
+    e.preventDefault(); //prevent default form submission behaviour
+
     const newTodo = {
       title,
       description,
-      completed: false,
+      completed: false, //newly added to-dos are incomplete by default
     };
-    addTodo(newTodo);
+
+    addTodo(newTodo); //adding new todo to context
     navigate("/");
   };
 
@@ -59,7 +64,7 @@ const AddToDo = () => {
               className="w-full mt-2 p-2 border rounded-md focus:ring-2 focus:ring-black focus:outline-none text-[#5109bc]"
               rows="4"
               required
-            ></textarea>
+            />
           </div>
           <button
             type="submit"

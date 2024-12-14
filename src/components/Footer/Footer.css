@@ -14,6 +14,8 @@
     text-align: center;
 }
 
+
+/* Media Queries for different screens */
 @media (max-width: 768px) {
     .footer {
         margin: 20px 10px; /* Smaller margins for smaller screens */
@@ -21,18 +23,18 @@
     }
 
     .footer-bottom {
-        font-size: 14px; /* Adjust font size */
+        font-size: 14px; 
     }
 }
 
 @media (max-width: 480px) {
     .footer {
-        margin: 15px; /* Minimal margin for very small screens */
+        margin: 15px; 
         gap: 10px;
     }
 
     .footer-bottom {
-        font-size: 12px; /* Further reduce font size for small screens */
-        line-height: 1.5; /* Ensure readability with sufficient line spacing */
+        font-size: 12px; 
+        line-height: 1.5; /* Ensuring readability with sufficient line spacing */
     }
 }

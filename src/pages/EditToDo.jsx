@@ -76,7 +76,7 @@ const EditToDo = () => {
               placeholder="To-Do Description"
               className="w-full mt-2 p-2 border rounded-md focus:ring-2 focus:ring-[#5109bc] focus:outline-none text-[#5109bc]"
               rows="4"
-            ></textarea>
+            />
           </div>
           <div className="flex items-center space-x-2">
             <input

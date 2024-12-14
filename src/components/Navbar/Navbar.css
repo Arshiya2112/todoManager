@@ -45,10 +45,11 @@
 }
 
 
+/* Media Queries for different screens */
 @media (max-width: 768px) {
     .navbar {
-        margin: 10px 20px; /* Smaller margins */
-        flex-direction: column; /* Stack items vertically */
+        margin: 10px 20px; 
+        flex-direction: column; 
         align-items: flex-start;
     }
 
@@ -59,13 +60,13 @@
     }
 
     .navbar h1 {
-        font-size: 28px; /* Further reduce size */
+        font-size: 28px; 
     }
 }
 
 @media (max-width: 480px) {
     .navbar {
-        margin: 10px; /* Even smaller margins */
+        margin: 10px; 
     }
 
     .nav-menu {
@@ -74,6 +75,6 @@
     }
 
     .navbar h1 {
-        font-size: 24px; /* Adjusted size for very small screens */
+        font-size: 24px; 
     }
 }

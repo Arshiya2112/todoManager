@@ -19,7 +19,9 @@ const App = () => {
           <Route path="/add" element={<AddToDo/>}/>
           <Route path="/edit/:id" element={<EditToDo/>}/> 
           {/* route with dynamic parameter */}
+
         </Routes>
+        
       </Router>
     </TodoProvider>
   );
