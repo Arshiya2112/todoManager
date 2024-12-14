@@ -1,4 +1,4 @@
-# To-DO Manager
+# To-Do Manager
 
 This is a To-Do List Manager built using React that allows users to add, edit and manage their todos efficiently. This application is designed with state management using Context API and styled using Tailwind CSS.
 
@@ -41,3 +41,10 @@ Updating an existing todo -
 1. Navigate to edit todo page by selecting a todo
 2. Modify the title, description or completion status of the todo
 3. Click update todo to save changes
+
+![image](https://github.com/user-attachments/assets/85c55850-1445-4d0a-9c12-1a172c09355e)
+![image](https://github.com/user-attachments/assets/63f7bb9b-f8e4-4132-a54d-4e9d4920409d)
+![image](https://github.com/user-attachments/assets/fd980705-e65c-48cc-ab00-726ea529137c)
+
+
+
